@@ -11,7 +11,16 @@
 
                     @csrf
                     @method('PUT')
+                    <div class="form-group">
+                        <label for="category_id">Categoria</label>
+                        <select class="form-control" id="category_id" name="category_id">
 
+                         @foreach ($categories as $category)
+                                <option {{(old('category_id', $post->category_id) == $category->id) ? 'selected': ''}} value="{{$category->id}}">{{$category->name}}</option>
+                            @endforeach
+
+                        </select>
+                    </div>
                  
                     <div class="form-group">
                       <label for="title">Titolo</label>

@@ -27,7 +27,7 @@
                                 <td>{{$post->title}}</td>
                                 <td>{{substr($post->content, 0, 30)}}</td>
                                 <td>{{$post->slug}}</td>
-                                <td>{{$post->category}}</td>
+                                <td>{{$post->category_id}}</td>
                              
                               
                                 <td>

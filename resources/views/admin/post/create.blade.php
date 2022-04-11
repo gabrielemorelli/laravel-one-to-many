@@ -12,6 +12,18 @@
                     @csrf
 
                     
+                    <div class="form-group">
+                        <label for="category_id">Categoria</label>
+                        <select class="form-control" id="category_id" name="category_name">
+                        
+
+                            @foreach ($categories as $category)
+                                <option {{ old('category_id') == $category->id ? 'selected' : '' }}
+                                    value="{{$category->id}}">{{$category->name}}</option>
+                            @endforeach
+
+                        </select>
+                    </div>
                   
 
                     <div class="form-group">
